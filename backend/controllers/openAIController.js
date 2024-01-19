@@ -20,7 +20,7 @@ const openAIController = asyncHandler(async (req, res) => {
       model: "gpt-3.5-turbo-instruct",
       prompt, 
       temperature: 1,
-      max_tokens: 10, //TODO have to change it later
+      max_tokens: 3000, //TODO have to change it later
       top_p: 1,
       frequency_penalty: 0,
       presence_penalty: 0,
