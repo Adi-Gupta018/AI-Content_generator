@@ -25,7 +25,7 @@ const Login = () => {
     if(isAuthenticated){
       navigate("/dashboard");
     }
-  },[isAuthenticated,])
+  },[isAuthenticated,navigate])
   const mutation = useMutation({ mutationFn: loginApi }); //* this mutation function will return a promise
   // Formik setup for form handling
   const formik = useFormik({

@@ -47,7 +47,7 @@ const CheckoutForm = () => {
             elements,
             clientSecret:res?.clientSecret,
             confirmParams:{
-              return_url:'http://localhost:3000/success'
+              return_url:'http://localhost:3000/success' //!frontend url
             },
           });
           if(error){

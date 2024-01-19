@@ -1,9 +1,10 @@
 //* create a function that will return a promise 
 //* this is what react query want
 import axios from 'axios'
-
+//!backend url
 // registration
-
+const url = "https://vercel.com/aditya-guptas-projects-b37d16ef/ai-content-generator/FbKuzwz7xxoS6X2jj9hFRtGLhALN";
+// const local = "http://localhost:8090";
 export const registerApi = async(userData) =>{
     const response = await axios.post('http://localhost:8090/api/v1/users/register',{
         username : userData?.username,
@@ -20,7 +21,7 @@ export const registerApi = async(userData) =>{
 // Login
 
 export const loginApi = async(userData) =>{
-    const response = await axios.post('http://localhost:8090/api/v1/users/login',{
+    const response = await axios.post(url+'/api/v1/users/login',{
         email: userData?.email,
         password: userData?.password,
     },
@@ -33,7 +34,7 @@ export const loginApi = async(userData) =>{
 
 // checkAuth
 export const checkUserAuthStatusApi = async() =>{
-    const response = await axios.get('http://localhost:8090/api/v1/users/auth/check',
+    const response = await axios.get(url+'/api/v1/users/auth/check',
     {
         withCredentials: true, //* as soon as we register this will set the cookies inside the browser
     }
@@ -43,7 +44,7 @@ export const checkUserAuthStatusApi = async() =>{
 
 // Logout
 export const logoutApi = async() =>{
-    const response = await axios.post('http://localhost:8090/api/v1/users/logout',{},
+    const response = await axios.post(url+'/api/v1/users/logout',{},
     {
         withCredentials: true, //* as soon as we register this will set the cookies inside the browser
     }
@@ -52,7 +53,7 @@ export const logoutApi = async() =>{
 }
 // Get User Profile
 export const profileApi = async() =>{
-    const response = await axios.get('http://localhost:8090/api/v1/users/profile',
+    const response = await axios.get(url+'/api/v1/users/profile',
     {
         withCredentials: true, //* as soon as we register this will set the cookies inside the browser
     }
