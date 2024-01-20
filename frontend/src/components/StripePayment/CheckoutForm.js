@@ -9,7 +9,7 @@ import { useMutation } from "react-query";
 import { createStripePaymentIntentApi } from "../../apis/stripePayment/stripePayment";
 import StatusMessage from "../Alert/StatusMessage";
 const url = 'https://aicg-fr.onrender.com';
-// const local = "http://localhost:3000"
+const local = "http://localhost:3000";
 const CheckoutForm = () => {
   // get the payloads (we can use params and useParams)
   const params = useParams();

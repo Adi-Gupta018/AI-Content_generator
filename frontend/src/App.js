@@ -28,9 +28,9 @@ export default function App() {
         <Route path='/register' element={<Registration/>} /> {/*have to pass Home as component i.e <Home/> */}
         <Route path='/login' element={<Login/>} /> 
         <Route path='/dashboard' element = {
-          <AuthRoute>
+          
             <Dashboard/> 
-            </AuthRoute>
+           
         } />
          <Route path='/generate-content' element = {
         

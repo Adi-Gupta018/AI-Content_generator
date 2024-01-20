@@ -4,7 +4,7 @@ import axios from 'axios'
 //!backend url
 // registration
 const url = "https://aicg.onrender.com";
-// const local = "http://localhost:8090";
+const local = "http://localhost:8090";
 export const registerApi = async(userData) =>{
     const response = await axios.post(url+'/api/v1/users/register',{
         username : userData?.username,

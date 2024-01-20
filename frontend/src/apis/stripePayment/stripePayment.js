@@ -2,7 +2,7 @@ import axios from 'axios'
 // stripe Payment
 //!backend url
 const url = "https://aicg.onrender.com";
-// const local = "http://localhost:8090";
+const local = "http://localhost:8090";
 export const handleFreeSubscriptionApi = async() =>{
     const response = await axios.post(url+'/api/v1/stripe/free-plan',
     {},

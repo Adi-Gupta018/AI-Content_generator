@@ -13,7 +13,7 @@ const User = require("./models/User");
 
 
 const url = 'https://aicg-fr.onrender.com';
-// const local = "http://localhost:3000";
+const local = "http://localhost:3000";
 // Connect to the database
 async function startServer() {
   try {
