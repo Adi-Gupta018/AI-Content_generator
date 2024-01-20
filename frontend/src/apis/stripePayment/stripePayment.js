@@ -1,7 +1,7 @@
 import axios from 'axios'
 // stripe Payment
 //!backend url
-const url = "https://ai-content-generator-drab.vercel.app/";
+const url = "hhttps://ai-content-generator-ocwstfmav-aditya-guptas-projects-b37d16ef.vercel.app";
 // const local = "http://localhost:8090";
 export const handleFreeSubscriptionApi = async() =>{
     const response = await axios.post(url+'/api/v1/stripe/free-plan',

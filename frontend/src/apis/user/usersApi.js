@@ -3,7 +3,7 @@
 import axios from 'axios'
 //!backend url
 // registration
-const url = "https://ai-content-generator-drab.vercel.app/";
+const url = "https://ai-content-generator-ocwstfmav-aditya-guptas-projects-b37d16ef.vercel.app";
 // const local = "http://localhost:8090";
 export const registerApi = async(userData) =>{
     const response = await axios.post(url+'/api/v1/users/register',{
