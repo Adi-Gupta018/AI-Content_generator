@@ -6,7 +6,7 @@ import axios from 'axios'
 const url = "https://ai-content-generator-drab.vercel.app/";
 // const local = "http://localhost:8090";
 export const registerApi = async(userData) =>{
-    const response = await axios.post('http://localhost:8090/api/v1/users/register',{
+    const response = await axios.post(url+'/api/v1/users/register',{
         username : userData?.username,
         email: userData?.email,
         password: userData?.password,
