@@ -3,10 +3,10 @@
 import axios from 'axios'
 //!backend url
 // registration
-// const url = "https://ai-content-generator-ocwstfmav-aditya-guptas-projects-b37d16ef.vercel.app";
-const local = "http://localhost:8090";
+const url = "https://aicg.onrender.com";
+// const local = "http://localhost:8090";
 export const registerApi = async(userData) =>{
-    const response = await axios.post(local+'/api/v1/users/register',{
+    const response = await axios.post(url+'/api/v1/users/register',{
         username : userData?.username,
         email: userData?.email,
         password: userData?.password,
@@ -21,7 +21,7 @@ export const registerApi = async(userData) =>{
 // Login
 
 export const loginApi = async(userData) =>{
-    const response = await axios.post(local+'/api/v1/users/login',{
+    const response = await axios.post(url+'/api/v1/users/login',{
         email: userData?.email,
         password: userData?.password,
     },
@@ -34,7 +34,7 @@ export const loginApi = async(userData) =>{
 
 // checkAuth
 export const checkUserAuthStatusApi = async() =>{
-    const response = await axios.get(local+'/api/v1/users/auth/check',
+    const response = await axios.get(url+'/api/v1/users/auth/check',
     {
         withCredentials: true, //* as soon as we register this will set the cookies inside the browser
     }
@@ -44,7 +44,7 @@ export const checkUserAuthStatusApi = async() =>{
 
 // Logout
 export const logoutApi = async() =>{
-    const response = await axios.post(local+'/api/v1/users/logout',{},
+    const response = await axios.post(url+'/api/v1/users/logout',{},
     {
         withCredentials: true, //* as soon as we register this will set the cookies inside the browser
     }
@@ -53,7 +53,7 @@ export const logoutApi = async() =>{
 }
 // Get User Profile
 export const profileApi = async() =>{
-    const response = await axios.get(local+'/api/v1/users/profile',
+    const response = await axios.get(url+'/api/v1/users/profile',
     {
         withCredentials: true, //* as soon as we register this will set the cookies inside the browser
     }
