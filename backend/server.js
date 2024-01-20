@@ -12,8 +12,8 @@ const stripeRouter = require("./routes/stripeRouter");
 const User = require("./models/User");
 
 
-const url = 'https://ai-content-generator-899y-gkguxi4n6.vercel.app';
-//const local = "http://localhost:3000";
+// const url = 'https://ai-content-generator-899y-gkguxi4n6.vercel.app';
+const local = "http://localhost:3000";
 // Connect to the database
 async function startServer() {
   try {
@@ -101,7 +101,7 @@ async function startServer() {
     app.use(express.json()); // Parse incoming JSON requests
     app.use(cookieParser()); // Parse cookies
     const corsOptions = {
-      origin: url, //!frontend url
+      origin: local, //!frontend url
       credentials: true, //* so that cookies can be passed
     };
     app.use(cors(corsOptions));

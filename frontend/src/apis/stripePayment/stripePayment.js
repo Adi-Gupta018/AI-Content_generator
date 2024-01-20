@@ -1,10 +1,10 @@
 import axios from 'axios'
 // stripe Payment
 //!backend url
-const url = "hhttps://ai-content-generator-ocwstfmav-aditya-guptas-projects-b37d16ef.vercel.app";
-// const local = "http://localhost:8090";
+// const url = "hhttps://ai-content-generator-ocwstfmav-aditya-guptas-projects-b37d16ef.vercel.app";
+const local = "http://localhost:8090";
 export const handleFreeSubscriptionApi = async() =>{
-    const response = await axios.post(url+'/api/v1/stripe/free-plan',
+    const response = await axios.post(local+'/api/v1/stripe/free-plan',
     {},
     {
         withCredentials: true, //* as soon as we register this will set the cookies inside the browser
@@ -17,7 +17,7 @@ export const handleFreeSubscriptionApi = async() =>{
 
 export const createStripePaymentIntentApi = async(payment) =>{
     console.log(payment);
-    const response = await axios.post(url+'/api/v1/stripe/checkout',
+    const response = await axios.post(local+'/api/v1/stripe/checkout',
     {
         amount:Number(payment?.amount),
         subscriptionPlan:payment?.plan,
@@ -32,7 +32,7 @@ export const createStripePaymentIntentApi = async(payment) =>{
 
 export const verifyPaymentApi = async(paymentId) =>{
     
-    const response = await axios.post(url+`/api/v1/stripe/verify-payment/${paymentId}`,
+    const response = await axios.post(local+`/api/v1/stripe/verify-payment/${paymentId}`,
     {
         
     },
