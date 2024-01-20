@@ -9,6 +9,8 @@ const AuthRoute = ({ children }) => {
     return <AuthCheckingComponent />
   }
   if (isError || isAuthenticated === false) {
+    console.log(isError);
+    console.log("aun",isAuthenticated);
     console.log("not navigating");
     return <Navigate to="/login" state={{ from: location }} />; //*useLocation is use to resend the user to its last location
   }

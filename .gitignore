@@ -40,3 +40,4 @@ pnpm-debug.log*
 # OS-specific files
 .DS_Store
 Thumbs.db
+backend/vercel.json
