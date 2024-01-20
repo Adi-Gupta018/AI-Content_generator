@@ -8,8 +8,8 @@ import {
 import { useMutation } from "react-query";
 import { createStripePaymentIntentApi } from "../../apis/stripePayment/stripePayment";
 import StatusMessage from "../Alert/StatusMessage";
-// const url = 'https://ai-content-generator-899y-gkguxi4n6.vercel.app';
-const local = "http://localhost:3000"
+const url = 'https://aicg-fr.onrender.com';
+// const local = "http://localhost:3000"
 const CheckoutForm = () => {
   // get the payloads (we can use params and useParams)
   const params = useParams();
@@ -48,7 +48,7 @@ const CheckoutForm = () => {
             elements,
             clientSecret:res?.clientSecret,
             confirmParams:{
-              return_url:local+'/success' //!frontend url
+              return_url:url+'/success' //!frontend url
             },
           });
           if(error){
