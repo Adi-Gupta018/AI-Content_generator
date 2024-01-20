@@ -25,7 +25,11 @@ const Registration = () => {
     }
   },[isAuthenticated])
   // mutation
-  const mutation = useMutation({ mutationFn: registerApi }); //* this mutation function will return a promise
+  const mutation = useMutation({ mutationFn: registerApi, onSuccess:()=>{
+    setTimeout(() => {
+      navigate("/login"); // Redirect user to login page
+    },1000);
+  } }); //* this mutation function will return a promise
 
   // Formik setup for form handling
   const formik = useFormik({
@@ -40,9 +44,7 @@ const Registration = () => {
       console.log("Form values", values);
       mutation.mutate(values); //* passing on the values
       // Simulate successful registration
-      setTimeout(() => {
-        navigate("/login"); // Redirect user to login page
-      },1000);
+     
      
     },
   });
