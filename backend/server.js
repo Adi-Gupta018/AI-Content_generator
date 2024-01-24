@@ -101,7 +101,7 @@ async function startServer() {
     app.use(express.json()); // Parse incoming JSON requests
     app.use(cookieParser()); // Parse cookies
     const corsOptions = {
-      origin: true, //!frontend url
+      origin: url, //!frontend url
       credentials: true, //* so that cookies can be passed
     };
     app.use(cors(corsOptions));
