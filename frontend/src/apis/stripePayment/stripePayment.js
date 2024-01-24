@@ -31,7 +31,8 @@ export const createStripePaymentIntentApi = async(payment) =>{
 }
 
 export const verifyPaymentApi = async(paymentId) =>{
-    
+
+    console.log("calling verify payment api");
     const response = await axios.post(url+`/api/v1/stripe/verify-payment/${paymentId}`,
     {
         
@@ -40,5 +41,6 @@ export const verifyPaymentApi = async(paymentId) =>{
         withCredentials: true, //* as soon as we register this will set the cookies inside the browser
     }
     );
+    console.log("from verify payment",response);
     return response?.data;
 }

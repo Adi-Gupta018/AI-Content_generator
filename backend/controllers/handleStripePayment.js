@@ -44,7 +44,7 @@ const handleStripePayment = asyncHandler(async (req, res) => {
 //verify payment
 const verifyPayment = asyncHandler(async(req,res) => {
     const {paymentId} = req.params
-    console.log(paymentId);
+    console.log("from backend payment id",paymentId);
     try {
         const paymentIntent = await stripe.paymentIntents.retrieve(paymentId);
         console.log("from backend verify payment",paymentIntent);
