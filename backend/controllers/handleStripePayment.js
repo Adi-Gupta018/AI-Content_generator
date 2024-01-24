@@ -47,7 +47,7 @@ const verifyPayment = asyncHandler(async(req,res) => {
     console.log(paymentId);
     try {
         const paymentIntent = await stripe.paymentIntents.retrieve(paymentId);
-        console.log(paymentIntent);
+        console.log("from backend verify payment",paymentIntent);
         if(paymentIntent.status === 'succeeded'){
             //get the info metadata
             const metadata = paymentIntent?.metadata;
